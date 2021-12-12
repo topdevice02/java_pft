@@ -29,6 +29,10 @@ public class ContactHelper extends BaseHelper {
     click(By.linkText("add new"));
   }
 
+  public void returnHome() {
+    click(By.linkText("home"));
+  }
+
   public void selectContact() {
     click(By.xpath("//td/input"));
   }
@@ -58,5 +62,9 @@ public class ContactHelper extends BaseHelper {
 
   public boolean isThereAContact() {
     return isElementPresent(By.xpath("//td/input"));
+  }
+
+  public int getContactCount() {
+    return wd.findElements(By.xpath("//img[@alt='Edit']")).size();
   }
 }
