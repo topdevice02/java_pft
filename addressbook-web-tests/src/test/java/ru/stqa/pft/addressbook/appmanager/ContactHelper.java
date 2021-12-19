@@ -57,14 +57,21 @@ public class ContactHelper extends BaseHelper {
     click(By.name("update"));
   }
 
-  public void createContact(ContactData contact) {
+  public void create(ContactData contact) {
     initContactCreation();
     fillContactForm(contact);
     submitContactCreation();
     returnToHomePage();
   }
 
-  public void modifyContact(int index, ContactData contact) {
+  public void delete(int index) {
+    selectContact(index);
+    deleteSelectedContact();
+    submitContactDeletion();
+    returnHome();
+  }
+
+  public void modify(int index, ContactData contact) {
     initContactModification(index);
     fillContactForm(contact);
     submitContactModification();
@@ -79,7 +86,7 @@ public class ContactHelper extends BaseHelper {
     return wd.findElements(By.xpath("//img[@alt='Edit']")).size();
   }
 
-  public List<ContactData> getContactList() {
+  public List<ContactData> list() {
     List<ContactData> contacts = new ArrayList<>();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
     for(WebElement element : elements){
