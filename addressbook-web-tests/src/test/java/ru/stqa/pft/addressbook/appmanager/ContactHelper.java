@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends BaseHelper {
 
@@ -38,7 +40,11 @@ public class ContactHelper extends BaseHelper {
   }
 
   public void selectContact(int index) {
-   wd.findElements(By.xpath("//td/input")).get(index).click();
+    wd.findElements(By.xpath("//td/input")).get(index).click();
+  }
+
+  private void selectContactById(int id) {
+    wd.findElement(By.cssSelector("input[id='" + id + "']")).click();
   }
 
   public void deleteSelectedContact() {
@@ -66,6 +72,13 @@ public class ContactHelper extends BaseHelper {
 
   public void delete(int index) {
     selectContact(index);
+    deleteSelectedContact();
+    submitContactDeletion();
+    returnHome();
+  }
+
+  public void delete(ContactData contact) {
+    selectContactById(contact.getId());
     deleteSelectedContact();
     submitContactDeletion();
     returnHome();
@@ -99,4 +112,19 @@ public class ContactHelper extends BaseHelper {
     }
     return contacts;
   }
+
+  public Set<ContactData> all() {
+    Set<ContactData> contacts = new HashSet<ContactData>();
+    List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
+    for(WebElement element : elements){
+      List<WebElement> cells = element.findElements(By.tagName("td"));
+      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("id"));
+      String firstname = cells.get(2).getText();
+      String lastname = cells.get(1).getText();
+      ContactData contact = new ContactData().withId(id).withFirstname(firstname).withLastname(lastname);
+      contacts.add(contact);
+    }
+    return contacts;
+  }
+
 }
