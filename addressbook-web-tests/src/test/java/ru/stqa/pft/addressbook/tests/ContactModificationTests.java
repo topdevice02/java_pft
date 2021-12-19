@@ -13,7 +13,8 @@ public class ContactModificationTests extends TestBase{
   @BeforeMethod
   public void ensurePreconditions(){
     if (app.contact().list().size() == 0){
-      app.contact().create(new ContactData("Ivan", "Ivanov", "+79175552358", "Ivanov02@gmail.com"));
+      app.contact().create(new ContactData()
+              .withFirstname("Ivan").withLastname("Ivanov").withMobile("+79175552358").withEmail("Ivanov02@gmail.com"));
     }
   }
 
@@ -21,7 +22,8 @@ public class ContactModificationTests extends TestBase{
   public void testContactModification(){
     List<ContactData> before = app.contact().list();
     int index = before.size() - 1;
-    ContactData contact = new ContactData(before.get(index).getId(),"Ivan", "Ivanov", "+79175552358", "Ivanov02@gmail.com");
+    ContactData contact = new ContactData().withId(before.get(index).getId())
+            .withFirstname("Ivan").withLastname("Ivanov").withMobile("+79175552358").withEmail("Ivanov02@gmail.com");
     app.contact().modify(index, contact);
     List<ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size());
