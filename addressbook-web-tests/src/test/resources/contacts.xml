@@ -1,0 +1,37 @@
+<list>
+  <contact>
+    <firstname>Firstname 0</firstname>
+    <lastname>Lastname 0</lastname>
+    <mobilePhone>+79175552350</mobilePhone>
+    <email>Ivanov00@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+  <contact>
+    <firstname>Firstname 1</firstname>
+    <lastname>Lastname 1</lastname>
+    <mobilePhone>+79175552351</mobilePhone>
+    <email>Ivanov01@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+  <contact>
+    <firstname>Firstname 2</firstname>
+    <lastname>Lastname 2</lastname>
+    <mobilePhone>+79175552352</mobilePhone>
+    <email>Ivanov02@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+  <contact>
+    <firstname>Firstname 3</firstname>
+    <lastname>Lastname 3</lastname>
+    <mobilePhone>+79175552353</mobilePhone>
+    <email>Ivanov03@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+  <contact>
+    <firstname>Firstname 4</firstname>
+    <lastname>Lastname 4</lastname>
+    <mobilePhone>+79175552354</mobilePhone>
+    <email>Ivanov04@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+</list>
