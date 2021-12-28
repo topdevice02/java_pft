@@ -1,6 +1,5 @@
 [
   {
-    "id": 2147483647,
     "firstname": "Firstname 0",
     "lastname": "Lastname 0",
     "mobilePhone": "+79175552350",
@@ -10,7 +9,6 @@
     }
   },
   {
-    "id": 2147483647,
     "firstname": "Firstname 1",
     "lastname": "Lastname 1",
     "mobilePhone": "+79175552351",
@@ -20,7 +18,6 @@
     }
   },
   {
-    "id": 2147483647,
     "firstname": "Firstname 2",
     "lastname": "Lastname 2",
     "mobilePhone": "+79175552352",
@@ -30,7 +27,6 @@
     }
   },
   {
-    "id": 2147483647,
     "firstname": "Firstname 3",
     "lastname": "Lastname 3",
     "mobilePhone": "+79175552353",
@@ -40,7 +36,6 @@
     }
   },
   {
-    "id": 2147483647,
     "firstname": "Firstname 4",
     "lastname": "Lastname 4",
     "mobilePhone": "+79175552354",
