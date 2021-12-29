@@ -20,4 +20,18 @@
     <email>Ivanov02@gmail.com</email>
     <photo>src\test\resources\java.png</photo>
   </contact>
+  <contact>
+    <firstname>Firstname 3</firstname>
+    <lastname>Lastname 3</lastname>
+    <mobilePhone>+79175552353</mobilePhone>
+    <email>Ivanov03@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
+  <contact>
+    <firstname>Firstname 4</firstname>
+    <lastname>Lastname 4</lastname>
+    <mobilePhone>+79175552354</mobilePhone>
+    <email>Ivanov04@gmail.com</email>
+    <photo>src\test\resources\java.png</photo>
+  </contact>
 </list>
