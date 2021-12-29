@@ -16,32 +16,5 @@
     "photo": {
       "path": "src\\test\\resources\\java.png"
     }
-  },
-  {
-    "firstname": "Firstname 2",
-    "lastname": "Lastname 2",
-    "mobilePhone": "+79175552352",
-    "email": "Ivanov02@gmail.com",
-    "photo": {
-      "path": "src\\test\\resources\\java.png"
-    }
-  },
-  {
-    "firstname": "Firstname 3",
-    "lastname": "Lastname 3",
-    "mobilePhone": "+79175552353",
-    "email": "Ivanov03@gmail.com",
-    "photo": {
-      "path": "src\\test\\resources\\java.png"
-    }
-  },
-  {
-    "firstname": "Firstname 4",
-    "lastname": "Lastname 4",
-    "mobilePhone": "+79175552354",
-    "email": "Ivanov04@gmail.com",
-    "photo": {
-      "path": "src\\test\\resources\\java.png"
-    }
   }
 ]
