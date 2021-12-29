@@ -7,14 +7,5 @@
     "photo": {
       "path": "src\\test\\resources\\java.png"
     }
-  },
-  {
-    "firstname": "Firstname 1",
-    "lastname": "Lastname 1",
-    "mobilePhone": "+79175552351",
-    "email": "Ivanov01@gmail.com",
-    "photo": {
-      "path": "src\\test\\resources\\java.png"
-    }
   }
 ]
