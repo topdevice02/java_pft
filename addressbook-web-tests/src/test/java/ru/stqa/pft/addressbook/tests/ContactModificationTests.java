@@ -15,7 +15,7 @@ public class ContactModificationTests extends TestBase{
 
   @BeforeMethod
   public void ensurePreconditions(){
-    if (app.contact().all().size() == 0){
+    if(app.db().contacts().size() == 0){
       File photo = new File("src/test/resources/java.png");
       app.contact().create(new ContactData()
               .withFirstname("Ivan").withLastname("Ivanov").withPhoto(photo).withMobilePhone("+79175552358").withEmail("Ivanov02@gmail.com"));
@@ -25,13 +25,13 @@ public class ContactModificationTests extends TestBase{
   @Test
   public void testContactModification(){
     File photo = new File("src/test/resources/js.png");
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     ContactData modifiedContact = before.iterator().next();
     ContactData contact = new ContactData().withId(modifiedContact.getId())
             .withFirstname("Ivan").withLastname("Ivanov").withPhoto(photo).withMobilePhone("+79175552358").withEmail("Ivanov02@gmail.com");
     app.contact().modify(contact);
     assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(before.withOut(modifiedContact).withAdded(contact)));
   }
 }
