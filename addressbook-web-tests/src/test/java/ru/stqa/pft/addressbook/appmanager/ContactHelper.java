@@ -25,9 +25,12 @@ public class ContactHelper extends BaseHelper {
   public void fillContactForm(ContactData contactData) {
     type(By.name("firstname"), contactData.getFirstname());
     type(By.name("lastname"), contactData.getLastname());
+    type(By.name("nickname"), contactData.getNickname());
     attach(By.name("photo"), contactData.getPhoto());
+    type(By.name("address"), contactData.getAddress());
     type(By.name("mobile"), contactData.getMobilePhone());
     type(By.name("email"), contactData.getEmail());
+    type(By.name("phone2"), contactData.getSecondPhone());
   }
 
   public void initContactCreation() {

@@ -2,36 +2,31 @@
   <contact>
     <firstname>Firstname 0</firstname>
     <lastname>Lastname 0</lastname>
+    <address>Y.Gagarina 0</address>
     <mobilePhone>+79175552350</mobilePhone>
+    <secondPhone>3425420</secondPhone>
     <email>Ivanov00@gmail.com</email>
     <photo>src\test\resources\java.png</photo>
+    <nickname>Nickname 0</nickname>
   </contact>
   <contact>
     <firstname>Firstname 1</firstname>
     <lastname>Lastname 1</lastname>
+    <address>Y.Gagarina 1</address>
     <mobilePhone>+79175552351</mobilePhone>
+    <secondPhone>3425421</secondPhone>
     <email>Ivanov01@gmail.com</email>
     <photo>src\test\resources\java.png</photo>
+    <nickname>Nickname 1</nickname>
   </contact>
   <contact>
     <firstname>Firstname 2</firstname>
     <lastname>Lastname 2</lastname>
+    <address>Y.Gagarina 2</address>
     <mobilePhone>+79175552352</mobilePhone>
+    <secondPhone>3425422</secondPhone>
     <email>Ivanov02@gmail.com</email>
     <photo>src\test\resources\java.png</photo>
-  </contact>
-  <contact>
-    <firstname>Firstname 3</firstname>
-    <lastname>Lastname 3</lastname>
-    <mobilePhone>+79175552353</mobilePhone>
-    <email>Ivanov03@gmail.com</email>
-    <photo>src\test\resources\java.png</photo>
-  </contact>
-  <contact>
-    <firstname>Firstname 4</firstname>
-    <lastname>Lastname 4</lastname>
-    <mobilePhone>+79175552354</mobilePhone>
-    <email>Ivanov04@gmail.com</email>
-    <photo>src\test\resources\java.png</photo>
+    <nickname>Nickname 2</nickname>
   </contact>
 </list>

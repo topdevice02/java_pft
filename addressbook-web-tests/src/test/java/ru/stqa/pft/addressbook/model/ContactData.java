@@ -22,6 +22,7 @@ public class ContactData {
   @Expose
   @Column (name = "lastname")
   private String lastname;
+  @Expose
   @Column (name = "address")
   @Type(type = "text")
   private String address;
@@ -35,6 +36,7 @@ public class ContactData {
   @Column (name = "work")
   @Type(type = "text")
   private String workPhone;
+  @Expose
   @Column (name = "phone2")
   @Type(type = "text")
   private String secondPhone;
@@ -56,6 +58,18 @@ public class ContactData {
   @Column (name = "photo")
   @Type(type = "text")
   private String photo;
+  @Expose
+  @Column (name = "nickname")
+  private String nickname;
+
+  public String getNickname() {
+    return nickname;
+  }
+
+  public ContactData withNickname(String nickname) {
+    this.nickname = nickname;
+    return this;
+  }
 
   public File getPhoto() {
     return new File (photo);
@@ -189,8 +203,11 @@ public class ContactData {
             "id=" + id +
             ", firstname='" + firstname + '\'' +
             ", lastname='" + lastname + '\'' +
+            ", address='" + address + '\'' +
             ", mobilePhone='" + mobilePhone + '\'' +
+            ", secondPhone='" + secondPhone + '\'' +
             ", email='" + email + '\'' +
+            ", nickname='" + nickname + '\'' +
             '}';
   }
 
@@ -204,8 +221,10 @@ public class ContactData {
     if (id != that.id) return false;
     if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
     if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null) return false;
+    if (address != null ? !address.equals(that.address) : that.address != null) return false;
     if (mobilePhone != null ? !mobilePhone.equals(that.mobilePhone) : that.mobilePhone != null) return false;
-    return email != null ? email.equals(that.email) : that.email == null;
+    if (secondPhone != null ? !secondPhone.equals(that.secondPhone) : that.secondPhone != null) return false;
+    return nickname != null ? nickname.equals(that.nickname) : that.nickname == null;
   }
 
   @Override
@@ -213,8 +232,10 @@ public class ContactData {
     int result = id;
     result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
     result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+    result = 31 * result + (address != null ? address.hashCode() : 0);
     result = 31 * result + (mobilePhone != null ? mobilePhone.hashCode() : 0);
-    result = 31 * result + (email != null ? email.hashCode() : 0);
+    result = 31 * result + (secondPhone != null ? secondPhone.hashCode() : 0);
+    result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
     return result;
   }
 }
