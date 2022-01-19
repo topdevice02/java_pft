@@ -142,4 +142,15 @@ public class ContactHelper extends BaseHelper {
     click(By.name("add"));
     contactCache = null;
   }
+
+  public void selectGroupToDel(int id) {
+    new Select(wd.findElement(By.name("group"))).selectByValue(String.valueOf(id));
+  }
+
+  public void removeContactFromGroup(ContactData contact, int id) {
+    selectGroupToDel(id);
+    selectContactById(contact.getId());
+    click(By.name("remove"));
+  }
 }
+
