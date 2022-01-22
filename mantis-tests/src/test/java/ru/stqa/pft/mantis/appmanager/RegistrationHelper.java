@@ -21,4 +21,11 @@ public class RegistrationHelper extends  BaseHelper {
     type(By.name("password_confirm"), password);
     click(By.cssSelector("input[value='Изменить учетную запись']"));
   }
+
+  public void login(String username, String password) {
+    wd.get(app.getProperty("web.baseUrl") + "/login_page.php");
+    type(By.name("username"), username);
+    type(By.name("password"), password);
+    click(By.cssSelector("input[value='Войти']"));
+  }
 }
