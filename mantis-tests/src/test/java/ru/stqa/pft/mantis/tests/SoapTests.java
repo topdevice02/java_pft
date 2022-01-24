@@ -15,14 +15,19 @@ public class SoapTests extends TestBase {
 
   @Test
   public void testGetProjects() throws MalformedURLException, ServiceException, RemoteException {
-    Set<Project> projects = app.soap().getProject();
-    System.out.println(projects.size());
-    for(Project project : projects){
-      System.out.println(project.getName());
+    for (int i = 1; i <= 3; i++) {
+      app.soap().getIssueStatus(i);
     }
+
+
+//    Set<Project> projects = app.soap().getProject();
+//    System.out.println(projects.size());
+//    for(Project project : projects){
+//      System.out.println(project.getName());
+//    }
   }
 
-  @Test
+  @Test(enabled = false)
   public void testCreateIssue() throws MalformedURLException, ServiceException, RemoteException {
     Set<Project> projects = app.soap().getProject();
     Issue issue = new Issue().withSummary("Test issue")
