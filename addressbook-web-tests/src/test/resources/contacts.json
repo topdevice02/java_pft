@@ -8,25 +8,5 @@
     "email": "Ivanov00@gmail.com",
     "photo": "src\\test\\resources\\java.png",
     "nickname": "Nickname 0"
-  },
-  {
-    "firstname": "Firstname 1",
-    "lastname": "Lastname 1",
-    "address": "Gagarina 1",
-    "mobilePhone": "+79175552351",
-    "secondPhone": "3425421",
-    "email": "Ivanov01@gmail.com",
-    "photo": "src\\test\\resources\\java.png",
-    "nickname": "Nickname 1"
-  },
-  {
-    "firstname": "Firstname 2",
-    "lastname": "Lastname 2",
-    "address": "Gagarina 2",
-    "mobilePhone": "+79175552352",
-    "secondPhone": "3425422",
-    "email": "Ivanov02@gmail.com",
-    "photo": "src\\test\\resources\\java.png",
-    "nickname": "Nickname 2"
   }
 ]
